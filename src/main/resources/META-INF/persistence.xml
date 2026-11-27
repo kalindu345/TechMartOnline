@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<persistence version="3.0"
+             xmlns="https://jakarta.ee/xml/ns/persistence">
+
+    <persistence-unit name="techmartPU" transaction-type="JTA">
+
+        <jta-data-source>jdbc/TechMartDS</jta-data-source>
+
+        <class>lk.kalindu.entity.Product</class>
+        <class>lk.kalindu.entity.Customer</class>
+        <class>lk.kalindu.entity.OrderEntity</class>
+
+        <properties>
+            <property name="jakarta.persistence.schema-generation.database.action"
+                      value="create"/>
+        </properties>
+
+    </persistence-unit>
+
+</persistence>

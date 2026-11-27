@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>TechMart Online Dashboard</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f6f8;
+            padding: 30px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .cards {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            background: white;
+            padding: 20px;
+            width: 200px;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px #ccc;
+        }
+
+        .card h2 {
+            margin: 0;
+            font-size: 32px;
+        }
+
+        .chart-box {
+            background: white;
+            margin: 30px auto;
+            padding: 20px;
+            max-width: 800px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px #ccc;
+        }
+    </style>
+</head>
+
+<body>
+
+<h1>TechMart Performance Dashboard</h1>
+
+<div class="cards">
+    <div class="card">
+        <p>Total Orders</p>
+        <h2 id="totalOrders">0</h2>
+    </div>
+
+    <div class="card">
+        <p>Messages Processed</p>
+        <h2 id="messagesProcessed">0</h2>
+    </div>
+
+    <div class="card">
+        <p>Emails Sent</p>
+        <h2 id="emailsSent">0</h2>
+    </div>
+
+    <div class="card">
+        <p>Products Available</p>
+        <h2 id="productsAvailable">0</h2>
+    </div>
+
+    <div class="card">
+        <p>Avg Response Time</p>
+        <h2 id="averageResponseTime">0 ms</h2>
+    </div>
+
+    <div class="card">
+        <p>Server Status</p>
+        <h2 id="serverStatus">-</h2>
+    </div>
+</div>
+
+<div class="chart-box">
+    <canvas id="metricsChart"></canvas>
+</div>
+
+<script src="./script.js"></script>
+
+</body>
+</html>
